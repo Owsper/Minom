@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "minom",
+	"version": "${version}",
+	"name": "Minom",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Owsper"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Owsper/Minom"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/minom/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.minom.Minom"
+		],
+		"client": [
+			"com.minom.client.MinomClient"
+		]
+	},
+	"mixins": [
+		"minom.mixins.json",
+		{
+			"config": "minom.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
